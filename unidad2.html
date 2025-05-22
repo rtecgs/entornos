@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contenido</title>
+    <link href="https://learn.ifp.es/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav>
+        <a href="index.html">Uni 1</a>
+        <a href="unidad2.html">Uni 2</a>
+        <a href="unidad3.html">Uni 3</a>
+    </nav>
+    <main>
+        <h3>2 - OPTIMIZACIÓN DE SOFTWARE</h3>
+
+        <h3>PLANIFICACIÓN DE PRUEBAS</h3>
+        <p>Un plan de pruebas es un documento formal que recoge todo lo necesario para planificar, organizar y ejecutar pruebas sobre un software. Es un elemento clave en el desarrollo porque permite detectar errores antes de que el sistema entre en producción.</p>
+
+        <h3>OBJETIVOS DE UN PLAN DE PRUEBAS:</h3>
+        <ul>
+            <li>Establecer cuándo y cómo se van a realizar las pruebas.</li>
+            <li>Garantizar que se cuenta con los recursos necesarios.</li>
+            <li>Evitar retrasos, errores o entregas defectuosas.</li>
+            <li>Aumentar la calidad del producto.</li>
+        </ul>
+    
+        <h3>TIPOS DE PRUEBAS</h3>
+        <h3>PRUEBA FUNCIONAL (CAJA NEGRA):</h3>
+        <ul>
+            <li>Se enfoca en qué hace el programa, no en cómo lo hace.</li>
+            <li>El probador no necesita conocer el código fuente.</li>
+            <li>Solo le interesa si, dadas unas entradas, se obtiene la salida esperada.</li>
+        </ul>
+        <p><em>Ejemplo:</em> En una calculadora, introduces 2 + 2 y compruebas que devuelve 4.</p>
+
+        <h3>PRUEBA ESTRUCTURAL (CAJA BLANCA):</h3>
+        <ul>
+            <li>Requiere conocer la estructura interna del código.</li>
+            <li>Se analizan los caminos posibles, condiciones, bucles...</li>
+            <li>Se busca ejecutar todos los bloques de código posibles al menos una vez.</li>
+        </ul>
+        <p><em>Ejemplo:</em> Probar todas las condiciones if, else, for, while, etc.</p>
+
+        <h3>PRUEBA DE REGRESIÓN:</h3>
+        <ul>
+            <li>Se aplica después de haber modificado el código.</li>
+            <li>Su objetivo es comprobar que nada que ya funcionaba ha dejado de funcionar por culpa del cambio.</li>
+            <li>Muy importante en proyectos grandes y colaborativos.</li>
+        </ul>
+
+        <h3>VALIDACIONES</h3>
+        <h3>ANTES DE VALIDAR, HAY QUE IDENTIFICAR:</h3>
+        <ul>
+            <li>Funciones del usuario: Qué tareas realiza un usuario dentro del sistema.</li>
+            <li>Estructura del sistema: Cómo están organizados los módulos o partes del programa.</li>
+            <li>Errores potenciales: Qué podría fallar, dónde, y por qué.</li>
+            <li>Reglas de negocio del cliente: Restricciones, normas, cálculos específicos (como impuestos, descuentos, plazos...)</li>
+            <li>Estructura de datos: Cómo se almacenan y organizan los datos en el sistema.</li>
+            <li>Procesos importantes: Procesos clave como pagos, facturación, registro, login, envío de emails...</li>
+        </ul>
+
+        <h3>PRUEBAS DE CÓDIGO</h3>
+        <ul>
+            <li>No se puede probar todo el programa manualmente al 100%.</li>
+            <li>Se usan estrategias para maximizar la cobertura de código con el menor número de pruebas.</li>
+        </ul>
+
+        <h4>1. PRUEBAS DE CUBRIMIENTO (Coverage):</h4>
+        <ul>
+            <li>Analizan cuántas líneas de código se han ejecutado durante las pruebas.</li>
+            <li>Se busca alcanzar el mayor porcentaje de cobertura posible (aunque nunca es 100%).</li>
+        </ul>
+        <p><em>Herramientas:</em> Eclipse Coverage, Istanbul, etc.</p>
+
+        <h4>2. CLASES DE EQUIVALENCIA:</h4>
+        <ul>
+            <li>Técnica que agrupa valores similares y elige uno representativo por grupo.</li>
+            <li>Se prueba un solo valor de cada grupo equivalente.</li>
+        </ul>
+
+        <h4>3. PRUEBA DE LÍMITES:</h4>
+        <ul>
+            <li>Se prueban los valores extremos permitidos.</li>
+            <li>Muy útil para evitar errores por desbordamiento o restricciones incorrectas.</li>
+        </ul>
+        <p><em>Ejemplo:</em> Campo numérico de DNI español</p>
+        <p>Estas técnicas se combinan con pruebas automatizadas para validar grandes cantidades de datos y procesos.</p>
+
+        <h3>PRUEBAS UNITARIAS</h3>
+        <p><strong>Pregunta esperada:</strong> "¿Qué son las pruebas unitarias? ¿Cuáles son sus ventajas e inconvenientes? ¿Qué herramientas se utilizan?"</p>
+
+        <h3>¿Qué son?</h3>
+        <ul>
+            <li>Son pruebas que se aplican a una unidad individual del programa (una función, método, clase...).</li>
+            <li>Su objetivo es verificar que cada parte del software funcione correctamente por separado.</li>
+            <li>Suelen escribirse incluso antes del código definitivo (programación dirigida por pruebas: TDD).</li>
+        </ul>
+
+        <h3>¿Qué se prueba?</h3>
+        <ul>
+            <li>La salida esperada ante entradas conocidas.</li>
+            <li>Comportamiento ante entradas inválidas o límites.</li>
+            <li>Errores esperados o excepciones.</li>
+        </ul>
+
+        <h3>Ventajas:</h3>
+        <ul>
+            <li>Detecta errores muy temprano en el desarrollo.</li>
+            <li>Ayuda a que el código sea más robusto y mantenible.</li>
+            <li>Facilita el refactoring posterior.</li>
+            <li>Sirve como documentación viva.</li>
+        </ul>
+
+        <h3>Desventajas:</h3>
+        <ul>
+            <li>Aumenta el tiempo de desarrollo inicial.</li>
+            <li>Añade más código que mantener.</li>
+            <li>No son fáciles de escribir para sistemas muy acoplados o complejos.</li>
+        </ul>
+
+        <h3>Herramientas comunes:</h3>
+        <ul>
+            <li>JUnit (Java)</li>
+            <li>PHPUnit (PHP)</li>
+            <li>NUnit (.NET)</li>
+            <li>PyTest (Python)</li>
+        </ul>
+
+
+        <h3>REFACTORIZACIÓN</h3>
+        <h3>¿Qué es?</h3>
+        <p>Es el proceso de modificar el código fuente para mejorar su estructura interna, sin cambiar su comportamiento externo.</p>
+
+        <h3>¿Para qué sirve?</h3>
+        <ul>
+            <li>Mejora la legibilidad del código.</li>
+            <li>Hace que sea más mantenible y escalable.</li>
+            <li>Elimina duplicidades, errores ocultos y malas prácticas.</li>
+        </ul>
+
+        <p><strong>Ejemplo:</strong> Dividir una función muy larga en varias más pequeñas y legibles.</p>
+        <p><strong>Nota:</strong> No debe cambiar lo que el software hace. Solo cómo está escrito.</p>
+
+
+        <h3>CONTROL DE VERSIONES</h3>
+
+        <h3>¿Qué es?</h3>
+        <p>Es un sistema que permite:</p>
+        <ul>
+            <li>Registrar todos los cambios realizados en el código fuente.</li>
+            <li>Consultar quién hizo qué cambio y cuándo.</li>
+            <li>Recuperar versiones anteriores si algo sale mal.</li>
+            <li>Coordinar el trabajo entre varios desarrolladores.</li>
+        </ul>
+
+        <h3>¿Por qué es importante?</h3>
+        <ul>
+            <li>Evita que los programadores sobrescriban el trabajo de otros.</li>
+            <li>Permite mantener diferentes versiones de un software.</li>
+            <li>Posibilita trabajar con ramas y fusiones.</li>
+            <li>Es imprescindible para el trabajo en equipo.</li>
+        </ul>
+
+        <h3>Herramientas más utilizadas:</h3>
+        <ul>
+            <li><strong>Git:</strong> el más usado actualmente.</li>
+            <li><strong>GitHub:</strong> plataforma basada en Git (en la nube, con funciones sociales).</li>
+            <li><strong>GitLab:</strong> similar a GitHub, pero con más control privado.</li>
+            <li><strong>Bitbucket:</strong> orientado a empresas, con soporte Git y Mercurial.</li>
+            <li><strong>SVN:</strong> para sistemas centralizados tradicionales.</li>
+        </ul>
+
+        <h3>Conceptos clave que debes conocer:</h3>
+        <ul>
+            <li><strong>Repositorio:</strong> almacén donde se guarda el código y su historial.</li>
+            <li><strong>Commit:</strong> guardar una versión concreta del código.</li>
+            <li><strong>Push:</strong> enviar tus cambios locales al repositorio central o remoto.</li>
+            <li><strong>Pull:</strong> traer los cambios hechos por otros a tu copia local.</li>
+            <li><strong>Branch (rama):</strong> una línea de trabajo independiente.</li>
+            <li><strong>Merge (fusión):</strong> unir los cambios de una rama con otra.</li>
+            <li><strong>Conflicto:</strong> ocurre cuando dos ramas modifican la misma línea de código.</li>
+        </ul>
+
+        <h3>RESUMEN FINAL DE CONTROL DE VERSIONES</h3>
+        <h3>Funciones principales</h3>
+        <ul>
+            <li><strong>Control histórico detallado de cada archivo:</strong> compara cambios a lo largo del tiempo, permite volver a versiones anteriores.</li>
+            <li><strong>Control de usuarios:</strong> diferentes permisos para acceder a cada tipo de archivos.</li>
+            <li><strong>Creación de ramas de desarrollo:</strong> clonar código para versiones distintas, reintegrar cambios entre ramas.</li>
+            <li><strong>Reducción de problemas de coordinación:</strong> mejora el trabajo entre varios programadores.</li>
+        </ul>
+
+</main>
+</body>
+</html>

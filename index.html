@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contenido</title>
+    <link href="https://learn.ifp.es/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav>
+        <a href="index.html">Uni 1</a>
+        <a href="unidad2.html">Uni 2</a>
+        <a href="unidad3.html">Uni 3</a>
+    </nav>
+    <main>
+
+        <h3>1 - DESARROLLO DE SOFTWARE</h3>
+        <h3>¿Qué es el desarrollo de software?</h3>
+        <p>El desarrollo de software es el proceso que tiene lugar desde que un usuario plantea una mejora de su sistema informático hasta que dicha solución (nuevo software creado o modificado) le es entregada para su utilización inmediata.</p>
+
+        <h3>Proceso de obtención de código ejecutable a partir del código fuente</h3>
+        <h3>1. Código fuente:</h3>
+        <p>Es el conjunto de instrucciones escritas por el programador en un lenguaje de programación. Este código es legible por humanos, pero no puede ser entendido directamente por la máquina.</p>
+        <h3>2. Preprocesamiento:</h3>
+        <p>El preprocesador toma el código fuente y realiza operaciones antes de la compilación, como:</p>
+        <ul>
+            <li>Incluir archivos con <code>#include</code>.</li>
+            <li>Reemplazar macros con <code>#define</code>.</li>
+            <li>Eliminar comentarios.</li>
+        </ul>
+        <p>El resultado es un código fuente preparado para compilar.</p>
+        <h3>3. Compilador:</h3>
+        <p>El compilador toma el código ya preprocesado y lo traduce a código máquina, pero sin unirlo todavía con otros módulos. El resultado es un fichero objeto que contiene instrucciones en lenguaje máquina, pero incompletas.</p>
+        <h3>4. Fichero Objeto:</h3>
+        <p>Es el resultado de compilar el código fuente. Contiene código máquina parcialmente traducido, pero no ejecutable todavía porque puede depender de otras partes (como funciones en otras bibliotecas o archivos).</p>
+        <h3>5. Librerías:</h3>
+        <p>Son colecciones de funciones ya compiladas que pueden usarse en distintos programas. Estas se vinculan en la fase de enlace.</p>
+        <h3>6. Enlazador (Linker):</h3>
+        <p>Une los códigos objeto y librerías en un archivo ejecutable.</p>
+        <h3>7. Ejecutable:</h3>
+        <p>Es el archivo final que puede ser ejecutado directamente por el sistema operativo. Contiene todas las instrucciones necesarias y ya enlazadas.</p>
+        <h3>Esquema del proceso</h3>
+        <img src="1.jpg" alt="Esquema" style="width: 400px; height: auto;">
+
+        <h3>Fases de desarrollo de una aplicación</h3>
+        <ol>
+            <li><strong>Planificación del proyecto:</strong> Se realiza un estudio de viabilidad para ver si el proyecto es realizable técnica y económicamente.</li>
+            <li><strong>Documento de presupuesto:</strong>
+                <ul>
+                    <li>Se hace una valoración económica del proyecto.</li>
+                    <li>Se contemplan los recursos humanos, materiales, técnicos, etc.</li>
+                </ul>
+            </li>
+            <li><strong>Firma del documento de inicio del proyecto:</strong> Es el paso formal que da comienzo oficialmente al proyecto.</li>
+            <li><strong>Análisis del sistema:</strong>
+                <ul>
+                    <li>Se analizan el estado actual del sistema del cliente.</li>
+                    <li>Las funciones esperadas.</li>
+                    <li>Los equipamientos disponibles o necesarios.</li>
+                </ul>
+            </li>
+            <li><strong>Diseño del sistema:</strong>
+                <ul>
+                    <li>Se define la arquitectura hardware y software.</li>
+                    <li>Se diseñan los componentes del sistema, módulos y estructura de datos a utilizar.</li>
+                </ul>
+            </li>
+            <li><strong>Codificación:</strong>
+                <ul>
+                    <li>Se usa un entorno de desarrollo para crear y modificar los objetos informáticos.</li>
+                    <li>Se programa todo el sistema en el lenguaje correspondiente.</li>
+                </ul>
+            </li>
+            <li><strong>Pruebas técnicas (pruebas del programador):</strong> Verificación técnica del código por parte del programador.</li>
+            <li><strong>Pruebas de usuario:</strong>
+                <ul>
+                    <li>El cliente prueba el sistema en entorno simulado con datos ficticios.</li>
+                    <li>Si todo está correcto, se firma un documento de aceptación.</li>
+                </ul>
+            </li>
+            <li><strong>Documentación:</strong>
+                <ul>
+                    <li>Se elabora documentación técnica y manuales de usuario.</li>
+                </ul>
+            </li>
+            <li><strong>Implementación (entorno de explotación):</strong>
+                <ul>
+                    <li>El software pasa a producción y se monitoriza.</li>
+                    <li>Se puede revertir si hay errores graves.</li>
+                </ul>
+            </li>
+            <li><strong>Mantenimiento:</strong>
+                <ul>
+                    <li>Se corrigen errores posteriores a la implementación.</li>
+                    <li>Se realizan ampliaciones o mejoras según necesidades.</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h3>Ejemplo práctico: desarrollo de una tienda online</h3>
+        <ol>
+            <li><strong>Planificación del proyecto:</strong> Se analiza la viabilidad técnica y económica de crear una tienda online.</li>
+            <li><strong>Presupuesto:</strong> Se calcula el coste de la web, se presenta al cliente.</li>
+            <li><strong>Firma del inicio:</strong> El cliente acepta el presupuesto y se inicia formalmente el proyecto.</li>
+            <li><strong>Análisis del sistema:</strong>
+                <ul>
+                    <li>Requisitos: registro, carrito, compra para usuarios; gestión para administradores.</li>
+                </ul>
+            </li>
+            <li><strong>Diseño del sistema:</strong>
+                <ul>
+                    <li>Estructura de la web: páginas y organización de datos.</li>
+                    <li>Selección de tecnologías: HTML, CSS, JS, PHP, MySQL...</li>
+                </ul>
+            </li>
+            <li><strong>Codificación:</strong> Desarrollo de funcionalidades clave como login, carrito, administración.</li>
+            <li><strong>Pruebas técnicas:</strong> Verificación funcional: registros, operaciones, base de datos.</li>
+            <li><strong>Pruebas de usuario:</strong> El cliente prueba la web en entorno de pruebas.</li>
+            <li><strong>Documentación:</strong> Manuales y comentarios en el código.</li>
+            <li><strong>Implementación:</strong> Publicación en servidor real, configuración del dominio y monitorización.</li>
+            <li><strong>Mantenimiento:</strong> Corrección de errores, incorporación de nuevas funciones.</li>
+        </ol>
+
+
+        <h3>Tipos de entornos de desarrollo</h3>
+        <p>Los entornos de desarrollo pueden clasificarse según varios criterios:</p>
+        <h3>1. Según la licencia</h3>
+        <ul>
+            <li><strong>Libre:</strong> puedes modificar, copiar y distribuir el software (por ejemplo, Eclipse).</li>
+            <li><strong>Privativo:</strong> requiere licencia de pago o de uso limitado (por ejemplo, Visual Studio Professional).</li>
+        </ul>
+        <h3>2. Según el sistema operativo</h3>
+        <ul>
+            <li>Windows, Linux, macOS, etc. Algunos entornos solo funcionan en sistemas concretos, otros son multiplataforma.</li>
+        </ul>
+        <h3>3. Según el lenguaje de programación soportado</h3>
+        <ul>
+            <li>Algunos entornos son específicos (por ejemplo, PyCharm para Python).</li>
+            <li>Otros permiten múltiples lenguajes (Visual Studio, Eclipse).</li>
+        </ul>
+
+        <h3>Componentes de un entorno de desarrollo (IDE)</h3>
+        <ol>
+            <li><strong>Editor de texto:</strong> Donde se escribe el código fuente.</li>
+            <li><strong>Compilador:</strong> Traduce el código fuente a lenguaje máquina (código objeto).</li>
+            <li><strong>Intérprete:</strong> Ejecuta el código línea a línea sin necesidad de compilar todo el programa.</li>
+            <li><strong>Depurador (Debugger):</strong> Permite detectar y corregir errores del código durante la ejecución (breakpoints, seguimiento de variables...).</li>
+            <li><strong>Control de versiones:</strong> Gestiona los cambios en el código y facilita el trabajo en equipo (Git, SVN…).</li>
+            <li><strong>Constructor de interfaces gráficas (GUI Builder):</strong> Herramienta para crear interfaces visuales (botones, formularios, menús…).</li>
+            <li><strong>Refactorización:</strong> Mejora la estructura interna del código sin modificar su comportamiento externo.</li>
+        </ol>
+
+        <h3>Otras características de los entornos de desarrollo</h3>
+        <ul>
+            <li>Soporte para varios lenguajes de programación.</li>
+            <li>Acceso a objetos externos como archivos de Excel o Word.</li>
+            <li>Acceso a bases de datos.</li>
+            <li>Servidores web locales, para simular funcionamiento real.</li>
+            <li>Asistentes de aplicaciones y formularios.</li>
+            <li>Plugins/extensiones, como el JDK (Java Development Kit) o soporte para frameworks.</li>
+        </ul>
+
+        <h3>Ejemplos de entornos de desarrollo (IDE)</h3>
+        <ul>
+            <li>Eclipse</li>
+            <li>NetBeans</li>
+            <li>JetBrains (como IntelliJ IDEA o PyCharm)</li>
+            <li>Qt Creator</li>
+            <li>Visual Studio</li>
+        </ul>
+        <p>Estos ofrecen interfaces completas, depuración, construcción de ejecutables, conexión a bases de datos, autocompletado y más.</p>
+
+</main>
+</body>
+</html>

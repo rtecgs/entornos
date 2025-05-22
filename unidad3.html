@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contenido</title>
+    <link href="https://learn.ifp.es/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav>
+        <a href="index.html">Uni 1</a>
+        <a href="unidad2.html">Uni 2</a>
+        <a href="unidad3.html">Uni 3</a>
+    </nav>
+    <main>
+        <h3>3 - Desarrollo orientado a objetos</h3>
+        <p>El desarrollo de software orientado a objetos (OO) se basa en un ciclo de vida iterativo e incremental. Esto significa que no se hacen todas las fases del desarrollo de una sola vez, sino que se repiten en ciclos, mejorando y refinando el sistema en cada iteración.</p>
+
+        <h3>Ventajas del enfoque orientado a objetos:</h3>
+        <ul>
+            <li>Reutilización de código (mediante clases ya creadas o librerías).</li>
+            <li>Mejora la calidad del software.</li>
+            <li>Facilita el mantenimiento.</li>
+            <li>Mayor facilidad para adaptarse y escalar proyectos complejos.</li>
+        </ul>
+
+        <p>Durante el proceso:</p>
+        <ul>
+            <li>Se identifican clases candidatas.</li>
+            <li>Se reutilizan clases existentes, modificándolas o heredando de ellas.</li>
+            <li>Se crean clases nuevas cuando no existen en las librerías.</li>
+        </ul>
+
+        <h3>¿Qué es UML? (Unified Modeling Language)</h3>
+        <p>UML es un conjunto de herramientas para modelar sistemas orientados a objetos.</p>
+        <p><strong>Objetivo:</strong> Sirve para entender, especificar, visualizar, diseñar, construir, mantener y documentar el software. Es como hacer los mapas de tu aplicación, antes de construirla.</p>
+
+        <h3>¿Qué incluye UML?</h3>
+        <ul>
+            <li>Notaciones gráficas para representar clases, objetos, interacciones, actividades...</li>
+            <li>Vistas del sistema desde diferentes ángulos: estructural, de comportamiento, de interacción.</li>
+            <li>Proviene de diferentes enfoques: modelado OO, modelado de datos, de componentes y de workflows.</li>
+        </ul>
+
+        <p><strong>Importante:</strong></p>
+        <ul>
+            <li>No es un método de desarrollo: no te dice cómo pasar del análisis al diseño ni al código.</li>
+            <li>Puede integrarse con otras técnicas: patrones de diseño, interfaces gráficas, documentación, etc.</li>
+        </ul>
+
+        <h3>Concepto de modelo y de diagrama en UML</h3>
+        <h3>¿Qué es un modelo?</h3>
+        <p>Un modelo es una abstracción de un sistema real. Se hace con el objetivo de comprenderlo mejor antes de construirlo.</p>
+        <ul>
+            <li>Un modelo representa lo importante del sistema, a un nivel de detalle adecuado para ese momento.</li>
+            <li>Puede representar: estructura estática, comportamiento, flujos de datos, casos de uso...</li>
+        </ul>
+
+        <h3>¿Qué es un diagrama?</h3>
+        <p>Un diagrama es la representación gráfica de un modelo (o parte de él).</p>
+        <ul>
+            <li>Representa elementos (clases, objetos, actividades...) conectados entre sí.</li>
+            <li>Puede ser estático (estructura) o dinámico (comportamiento).</li>
+            <li>Cada tipo de diagrama ofrece una vista diferente del sistema.</li>
+        </ul>
+
+        <h3>Tipos de diagramas UML básicos:</h3>
+        <h3>Diagramas estáticos (estructura):</h3>
+        <ul>
+            <li>No representan interacción ni comportamiento.</li>
+            <li>Sirven como mapa del sistema.</li>
+            <li>Ejemplos:
+                <ul>
+                    <li>Diagrama de clases</li>
+                    <li>Diagrama de paquetes</li>
+                    <li>Diagrama de componentes</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Diagramas dinámicos (comportamiento):</h3>
+        <ul>
+            <li>Representan interacción entre elementos y comportamiento del sistema.</li>
+            <li>Ejemplos:
+                <ul>
+                    <li>Diagrama de secuencia</li>
+                    <li>Diagrama de estados</li>
+                    <li>Diagrama de casos de uso</li>
+                    <li>Diagrama de actividades</li>
+                </ul>
+            </li>
+        </ul>
+    
+        <h3>DIAGRAMA DE CLASES - UML</h3>
+        <p>El diagrama de clases representa la estructura estática de un sistema. Describe las clases, atributos, métodos y las relaciones entre ellas.</p>
+
+        <h3>TIPOS DE RELACIONES EN UN DIAGRAMA DE CLASES</h3>
+
+        <h3>1. Asociación</h3>
+        <p>Es la relación más común en UML. Representa una dependencia semántica entre objetos o clases.</p>
+        <ul>
+            <li>Se representa con una línea continua entre las clases.</li>
+            <li>Puede tener nombre (un verbo que describe la relación).</li>
+            <li>Puede tener rol (nombre de cada extremo).</li>
+            <li>Puede tener multiplicidad o cardinalidad (1, *, 0..1, etc.).</li>
+        </ul>
+        <p><strong>Ejemplos:</strong> Un Profesor enseña un Curso. Una Persona posee una Mascota.</p>
+        <p><strong>Tipos:</strong></p>
+        <ul>
+            <li>Unaria: la clase se relaciona consigo misma.</li>
+            <li>Binaria: entre dos clases (la más común).</li>
+            <li>Ternaria: entre tres clases.</li>
+            <li>N-aria: entre tres o más.</li>
+        </ul>
+
+        <h3>2. Herencia (Generalización / Especialización)</h3>
+        <p>Una subclase hereda atributos y métodos de una superclase. También llamada relación padre-hijo.</p>
+        <ul>
+            <li>Se representa con una flecha con triángulo blanco, apuntando hacia la superclase.</li>
+            <li>La subclase añade o especializa comportamiento.</li>
+        </ul>
+        <p><strong>Ejemplo:</strong> Animal (superclase) → Perro, Gato, Pez (subclases). Todos pueden respirar (heredado), pero cada uno hace algo distinto: ladrar, maullar, nadar.</p>
+        <p>Las subclases heredan atributos públicos y protegidos.</p>
+
+        <h3>3. Agregación</h3>
+        <p>Es una relación de tipo “tiene un”, pero los objetos pueden vivir de forma independiente.</p>
+        <ul>
+            <li>Representa una relación todo/parte, pero no implica dependencia total.</li>
+            <li>Se representa con una línea con rombo blanco en el extremo del “todo”.</li>
+        </ul>
+        <p><strong>Ejemplo:</strong> Un Autobús tiene un Conductor. El Conductor puede existir, aunque el Autobús se elimine.</p>
+        <p><strong>Nota:</strong> Agregación = relación dinámica, por referencia.</p>
+
+        <h3>4. Composición</h3>
+        <p>Es una relación más fuerte que la agregación. Aquí, las partes no pueden existir sin el todo.</p>
+        <ul>
+            <li>Se representa con una línea con rombo negro en el extremo del “todo”.</li>
+            <li>Los objetos “parte” mueren cuando muere el objeto contenedor.</li>
+        </ul>
+        <p><strong>Ejemplo:</strong> Una Persona está compuesta por una Cabeza y un Cuerpo. Si la persona no existe, esas partes tampoco.</p>
+        <p><strong>Nota:</strong> Composición = relación estática, por valor.</p>
+
+        <h3>5. Dependencia</h3>
+        <p>Indica que una clase necesita a otra para realizar una función, pero no forma parte de su estructura interna.</p>
+        <ul>
+            <li>Se representa con una flecha discontinua (línea de puntos) que apunta desde la clase dependiente a la clase utilizada.</li>
+        </ul>
+        <p><strong>Ejemplo:</strong> Una clase Factura que usa Cliente solo para consultar datos, pero no lo contiene como atributo.</p>
+        <p><strong>Nota:</strong> Se usa para señalar una relación temporal y débil.</p>
+
+
+        <h3>DIAGRAMA DE CLASES - CARACTERÍSTICAS Y ELEMENTOS CLAVE</h3>
+        <p>Un diagrama de clases es una representación gráfica de las clases de un sistema, junto con sus atributos, métodos y relaciones entre ellas.</p>
+
+        <h3>¿Qué es una clase?</h3>
+        <p>Una clase es una plantilla o modelo que describe objetos con atributos y comportamientos comunes.</p>
+        <p>Se representa como un rectángulo dividido en tres secciones:</p>
+        <ol>
+            <li>Nombre de la clase</li>
+            <li>Atributos</li>
+            <li>Métodos (operaciones)</li>
+        </ol>
+
+        <h3>ELEMENTOS DE UNA CLASE UML</h3>
+        <h4>1. Nombre de la clase</h4>
+        <ul>
+            <li>Se escribe en negrita o centrado en la parte superior del rectángulo.</li>
+            <li>Puede estar subrayado si representa una instancia concreta.</li>
+        </ul>
+
+        <h4>2. Atributos (propiedades)</h4>
+        <ul>
+            <li>Representan el estado de la clase.</li>
+            <li>Se escriben en la segunda sección del rectángulo.</li>
+            <li>Formato: visibilidad nombre: tipo</li>
+        </ul>
+        <p><strong>Ejemplo:</strong><br>
+        +marca: String<br>
+        -modelo: String<br>
+        #serie: int</p>
+
+        <h4>3. Métodos (operaciones o funciones)</h4>
+        <ul>
+            <li>Representan el comportamiento de la clase.</li>
+            <li>Se escriben en la tercera sección.</li>
+            <li>Formato: visibilidad nombre(parámetros): tipoRetorno</li>
+        </ul>
+        <p><strong>Ejemplo:</strong><br>
+        +agregarRopa(): void<br>
+        +lavar(): void</p>
+
+        <h3>IDENTIFICAR ELEMENTOS EN UN DIAGRAMA DE CLASES</h3>
+        <ul>
+            <li>Si ves un rectángulo con 3 secciones, es una clase.</li>
+            <li>Si hay solo una sección con nombre en formato <code>nombreObjeto: Clase</code>, es un objeto.</li>
+            <li>Dentro del rectángulo, si algo tiene <code>()</code>, es un método.</li>
+            <li>Si hay <code>: tipoDato</code>, es un atributo.</li>
+        </ul>
+
+        <pre>
++--------------------------------------+
+|         NombreClase                  |  <-- Nombre de la clase (en negrita o centrado)
++--------------------------------------+
+| + atributo1: Tipo                    |  <-- Atributos (propiedades)
+| - atributoPrivado: Tipo             |     (+ público, - privado, # protegido)
+| # atributoProtegido: Tipo           |
++--------------------------------------+
+| + metodo1(param: Tipo): Retorno     |  <-- Métodos (operaciones o funciones)
+| - metodoPrivado(): void             |     También con símbolos de visibilidad
++--------------------------------------+
+        </pre>
+
+
+        <h3>Ejemplo gráfico:</h3>
+        <img src="3.jpg" alt="diagrama" style="max-width: 600px; height: auto;">
+
+
+        <h3>DIAGRAMA DE SECUENCIA UML</h3>
+
+        <h3>¿Qué es un diagrama de secuencia?</h3>
+        <p>Representa la interacción entre objetos o clases a lo largo del tiempo. Muestra el orden en que se envían y reciben mensajes entre los objetos para realizar una función o proceso.</p>
+
+        <h3>Elementos básicos de un diagrama de secuencia</h3>
+        <ol>
+            <li><strong>Objetos:</strong>
+                <ul>
+                    <li>Se representan en la parte superior con un rectángulo que contiene el nombre del objeto y su clase, separados por dos puntos: <code>nombreObjeto: Clase</code></li>
+                    <li>Puede usarse un nombre genérico si se trata de cualquier instancia de esa clase.</li>
+                </ul>
+            </li>
+            <li><strong>Línea de vida:</strong>
+                <ul>
+                    <li>Una línea vertical que baja del rectángulo del objeto.</li>
+                    <li>Representa el tiempo de vida del objeto durante la interacción.</li>
+                </ul>
+            </li>
+            <li><strong>Activación:</strong>
+                <ul>
+                    <li>Rectángulo delgado y vertical sobre la línea de vida.</li>
+                    <li>Indica que el objeto está activo ejecutando una acción.</li>
+                </ul>
+            </li>
+            <li><strong>Mensajes:</strong>
+                <ul>
+                    <li>Flechas horizontales o diagonales que conectan las líneas de vida.</li>
+                    <li>Representan el envío de un mensaje o llamada de un objeto a otro.</li>
+                    <li><strong>Tipos de mensajes:</strong></li>
+                    <ul>
+                        <li>Llamada de operación: flecha sólida con punta llena.</li>
+                        <li>Retorno: línea discontinua con punta abierta (se usa para mostrar respuesta).</li>
+                    </ul>
+                </ul>
+            </li>
+            <li><strong>Loops (bucles):</strong>
+                <ul>
+                    <li>Bloques marcados con un rectángulo que indican que una acción se repite.</li>
+                    <li>Se puede anotar la condición del bucle.</li>
+                </ul>
+            </li>
+            <li><strong>Condiciones y fragmentos alternativos:</strong>
+                <ul>
+                    <li>Partes del diagrama pueden tener condiciones (if, else) usando marcos con etiquetas como <code>alt</code> (alternativa) o <code>opt</code> (opcional).</li>
+                </ul>
+            </li>
+            <li><strong>Destrucción:</strong>
+                <ul>
+                    <li>Representa el fin de vida de un objeto.</li>
+                    <li>Se marca con una X en la línea de vida.</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h3>¿Cómo interpretar un diagrama de secuencia?</h3>
+        <ol>
+            <li>Identifica los objetos involucrados y su papel.</li>
+            <li>Sigue la línea temporal vertical para ver el orden de mensajes.</li>
+            <li>Observa activaciones y respuestas para entender qué procesos se están ejecutando.</li>
+            <li>Revisa si hay bucles o condiciones para saber si alguna acción se repite o es opcional.</li>
+            <li>Si aparece una destrucción, significa que el objeto termina su vida en ese momento.</li>
+        </ol>
+
+</main>
+</body>
+</html>
