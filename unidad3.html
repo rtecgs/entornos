@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -132,6 +131,27 @@
         </ul>
         <p><strong>Ejemplo:</strong> Un Autobús tiene un Conductor. El Conductor puede existir, aunque el Autobús se elimine.</p>
         <p><strong>Nota:</strong> Agregación = relación dinámica, por referencia.</p>
+        <br></br>
+        <h4>Agregación vs composición</h4>
+
+        <p><strong>Agregación:</strong></p>
+        <ul>
+        <li>Es un subconjunto de la asociación.</li>
+        <li>Representa un tipo de asociación débil.</li>
+        <li>Los objetos enlazados pueden existir de forma independiente entre sí.</li>
+        <li>Se representa con una línea sólida y una punta de flecha vacía.</li>
+        <li>Se define como una relación de tipo "tiene-un".</li>
+        </ul>
+
+        <p><strong>Composición:</strong></p>
+        <ul>
+        <li>Es un subconjunto más fuerte dentro de la agregación.</li>
+        <li>Representa una asociación fuerte.</li>
+        <li>Los objetos enlazados son altamente dependientes: si el objeto contenedor desaparece, los componentes también.</li>
+        <li>Se representa con una línea sólida y una punta de flecha rellena.</li>
+        <li>Se define como una relación de tipo "parte-de".</li>
+        </ul>
+        <br></br>
 
         <h3>4. Composición</h3>
         <p>Es una relación más fuerte que la agregación. Aquí, las partes no pueden existir sin el todo.</p>
@@ -194,6 +214,7 @@
         <h3>IDENTIFICAR ELEMENTOS EN UN DIAGRAMA DE CLASES</h3>
         <ul>
             <li>Si ves un rectángulo con 3 secciones, es una clase.</li>
+            <li>Si la clase es cursiva, significa que es abstracta y no se puede instanciar si no tiene hijos.</li>
             <li>Si hay solo una sección con nombre en formato <code>nombreObjeto: Clase</code>, es un objeto.</li>
             <li>Dentro del rectángulo, si algo tiene <code>()</code>, es un método.</li>
             <li>Si hay <code>: tipoDato</code>, es un atributo.</li>
