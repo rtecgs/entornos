@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -17,6 +16,98 @@
     <main>
         <h3>2 - OPTIMIZACIÓN DE SOFTWARE</h3>
 
+        <h4>Identificar las funcionalidades del programa que vamos a comprobar</h4>
+        <p>
+        Los entornos de desarrollo ofrecen herramientas para prevenir errores en la entrada de datos. 
+        Estas herramientas deben ser utilizadas para validar el programa mediante filtros, declaración de variables o pruebas de rutina. 
+        Sin embargo, antes de realizar esta validación, es fundamental <strong>identificar las funcionalidades del programa que vamos a comprobar</strong>.
+        </p>
+
+        <h5>¿Qué debemos identificar?</h5>
+        <p>Para validar correctamente un programa, debemos analizar los siguientes elementos clave:</p>
+        <ul>
+            <li><strong>Funciones de usuario:</strong> Qué tareas puede realizar el usuario dentro del sistema (por ejemplo, registrar datos, consultar información, editar, eliminar).</li>
+            <li><strong>Procesos del negocio del cliente:</strong> Qué procesos concretos deben ejecutarse según los requerimientos del cliente (por ejemplo, facturación, generación de informes, envío de correos).</li>
+            <li><strong>Estructura:</strong> Cómo está organizado internamente el sistema, tanto a nivel de componentes como de módulos.</li>
+            <li><strong>Estructura de datos:</strong> Qué tipos de datos maneja el sistema y cómo se almacenan o se relacionan entre sí (por ejemplo, tablas de bases de datos, relaciones entre entidades).</li>
+            <li><strong>Posibles problemas:</strong> Errores potenciales que podrían surgir en la lógica, flujo o entrada de datos del sistema.</li>
+            <li><strong>Reglas de negocio del cliente:</strong> Normas específicas del negocio que deben cumplirse, como cálculos de impuestos, límites, validaciones personalizadas o condiciones especiales.</li>
+        </ul>
+        <br></br>
+
+        <h3>Tipos de pruebas</h3>
+
+        <h4>Prueba funcional (caja negra)</h4>
+        <ul>
+            <li>Se enfoca en qué hace el programa, no en cómo lo hace.</li>
+            <li>El probador no necesita conocer el código fuente.</li>
+            <li>Solo le interesa si, dadas unas entradas, se obtiene la salida esperada.</li>
+        </ul>
+        <p><em>Ejemplo:</em> En una calculadora, introduces 2 + 2 y compruebas que devuelve 4.</p>
+
+        <h4>Prueba estructural (caja blanca)</h4>
+        <ul>
+            <li>Requiere conocer la estructura interna del código.</li>
+            <li>Se analizan los caminos posibles, condiciones, bucles...</li>
+            <li>Se busca ejecutar todos los bloques de código posibles al menos una vez.</li>
+        </ul>
+        <p><em>Ejemplo:</em> Probar todas las condiciones if, else, for, while, etc.</p>
+
+        <h4>Prueba de regresión</h4>
+        <ul>
+            <li>Se aplica después de haber modificado el código.</li>
+            <li>Su objetivo es comprobar que nada que ya funcionaba ha dejado de funcionar por culpa del cambio.</li>
+            <li>Muy importante en proyectos grandes y colaborativos.</li>
+        </ul>
+        <br></br>
+
+        <h3>Pruebas unitarias</h3>
+
+        <ul>
+            <li>Son pruebas que se aplican a una unidad individual del programa (una función, método, clase...).</li>
+            <li>Su objetivo es verificar que cada parte del software funcione correctamente por separado.</li>
+            <li>Suelen escribirse incluso antes del código definitivo (programación dirigida por pruebas: TDD).</li>
+        </ul>
+
+        <h4>¿Qué se prueba?</h4>
+        <ul>
+            <li>La salida esperada ante entradas conocidas.</li>
+            <li>Comportamiento ante entradas inválidas o límites.</li>
+            <li>Errores esperados o excepciones.</li>
+        </ul>
+
+        <h4>Ventajas</h4>
+        <ul>
+            <li>Detecta errores muy temprano en el desarrollo.</li>
+            <li>Ayuda a que el código sea más robusto y mantenible.</li>
+            <li>Facilita el refactoring posterior.</li>
+            <li>Sirve como documentación viva.</li>
+        </ul>
+
+        <h4>Desventajas</h4>
+        <ul>
+            <li>Aumenta el tiempo de desarrollo inicial.</li>
+            <li>Añade más código que mantener.</li>
+            <li>No son fáciles de escribir para sistemas muy acoplados o complejos.</li>
+        </ul>
+        <br></br>
+
+        <h3>REFACTORIZACIÓN</h3>
+        <h3>¿Qué es?</h3>
+        <p>Es el proceso de modificar el código fuente para mejorar su estructura interna, sin cambiar su comportamiento externo.</p>
+
+        <h3>¿Para qué sirve?</h3>
+        <ul>
+            <li>Mejora la legibilidad del código.</li>
+            <li>Hace que sea más mantenible y escalable.</li>
+            <li>Elimina duplicidades, errores ocultos y malas prácticas.</li>
+        </ul>
+
+        <p><strong>Ejemplo:</strong> Dividir una función muy larga en varias más pequeñas y legibles.</p>
+        <p><strong>Nota:</strong> No debe cambiar lo que el software hace. Solo cómo está escrito.</p>
+        <br></br>
+
+
         <h3>PLANIFICACIÓN DE PRUEBAS</h3>
         <p>Un plan de pruebas es un documento formal que recoge todo lo necesario para planificar, organizar y ejecutar pruebas sobre un software. Es un elemento clave en el desarrollo porque permite detectar errores antes de que el sistema entre en producción.</p>
 
@@ -28,30 +119,6 @@
             <li>Aumentar la calidad del producto.</li>
         </ul>
     
-        <h3>TIPOS DE PRUEBAS</h3>
-        <h3>PRUEBA FUNCIONAL (CAJA NEGRA):</h3>
-        <ul>
-            <li>Se enfoca en qué hace el programa, no en cómo lo hace.</li>
-            <li>El probador no necesita conocer el código fuente.</li>
-            <li>Solo le interesa si, dadas unas entradas, se obtiene la salida esperada.</li>
-        </ul>
-        <p><em>Ejemplo:</em> En una calculadora, introduces 2 + 2 y compruebas que devuelve 4.</p>
-
-        <h3>PRUEBA ESTRUCTURAL (CAJA BLANCA):</h3>
-        <ul>
-            <li>Requiere conocer la estructura interna del código.</li>
-            <li>Se analizan los caminos posibles, condiciones, bucles...</li>
-            <li>Se busca ejecutar todos los bloques de código posibles al menos una vez.</li>
-        </ul>
-        <p><em>Ejemplo:</em> Probar todas las condiciones if, else, for, while, etc.</p>
-
-        <h3>PRUEBA DE REGRESIÓN:</h3>
-        <ul>
-            <li>Se aplica después de haber modificado el código.</li>
-            <li>Su objetivo es comprobar que nada que ya funcionaba ha dejado de funcionar por culpa del cambio.</li>
-            <li>Muy importante en proyectos grandes y colaborativos.</li>
-        </ul>
-
         <h3>VALIDACIONES</h3>
         <h3>ANTES DE VALIDAR, HAY QUE IDENTIFICAR:</h3>
         <ul>
@@ -90,60 +157,6 @@
         <p><em>Ejemplo:</em> Campo numérico de DNI español</p>
         <p>Estas técnicas se combinan con pruebas automatizadas para validar grandes cantidades de datos y procesos.</p>
 
-        <h3>PRUEBAS UNITARIAS</h3>
-        <p><strong>Pregunta esperada:</strong> "¿Qué son las pruebas unitarias? ¿Cuáles son sus ventajas e inconvenientes? ¿Qué herramientas se utilizan?"</p>
-
-        <h3>¿Qué son?</h3>
-        <ul>
-            <li>Son pruebas que se aplican a una unidad individual del programa (una función, método, clase...).</li>
-            <li>Su objetivo es verificar que cada parte del software funcione correctamente por separado.</li>
-            <li>Suelen escribirse incluso antes del código definitivo (programación dirigida por pruebas: TDD).</li>
-        </ul>
-
-        <h3>¿Qué se prueba?</h3>
-        <ul>
-            <li>La salida esperada ante entradas conocidas.</li>
-            <li>Comportamiento ante entradas inválidas o límites.</li>
-            <li>Errores esperados o excepciones.</li>
-        </ul>
-
-        <h3>Ventajas:</h3>
-        <ul>
-            <li>Detecta errores muy temprano en el desarrollo.</li>
-            <li>Ayuda a que el código sea más robusto y mantenible.</li>
-            <li>Facilita el refactoring posterior.</li>
-            <li>Sirve como documentación viva.</li>
-        </ul>
-
-        <h3>Desventajas:</h3>
-        <ul>
-            <li>Aumenta el tiempo de desarrollo inicial.</li>
-            <li>Añade más código que mantener.</li>
-            <li>No son fáciles de escribir para sistemas muy acoplados o complejos.</li>
-        </ul>
-
-        <h3>Herramientas comunes:</h3>
-        <ul>
-            <li>JUnit (Java)</li>
-            <li>PHPUnit (PHP)</li>
-            <li>NUnit (.NET)</li>
-            <li>PyTest (Python)</li>
-        </ul>
-
-
-        <h3>REFACTORIZACIÓN</h3>
-        <h3>¿Qué es?</h3>
-        <p>Es el proceso de modificar el código fuente para mejorar su estructura interna, sin cambiar su comportamiento externo.</p>
-
-        <h3>¿Para qué sirve?</h3>
-        <ul>
-            <li>Mejora la legibilidad del código.</li>
-            <li>Hace que sea más mantenible y escalable.</li>
-            <li>Elimina duplicidades, errores ocultos y malas prácticas.</li>
-        </ul>
-
-        <p><strong>Ejemplo:</strong> Dividir una función muy larga en varias más pequeñas y legibles.</p>
-        <p><strong>Nota:</strong> No debe cambiar lo que el software hace. Solo cómo está escrito.</p>
 
 
         <h3>CONTROL DE VERSIONES</h3>
